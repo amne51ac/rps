@@ -202,7 +202,7 @@ def handle_command(game, command, user, channel):
 
                 if len(winners):
                     return to_channel, " ".join(winners).upper() + \
-                        " are a force to be reconed with!\nResults: \n" \
+                        " are a force to be reckoned with!\nResults: \n" \
                         "Rock - " + " ".join(players["rock"]).upper() + "\n" \
                         "Paper - " + " ".join(players["paper"]).upper() + \
                         "\nScissors - " + " ".join(players["scissors"]).upper()

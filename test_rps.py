@@ -178,8 +178,8 @@ def test_complete_game_one_rock(handle, game):
     handle(game, "challenge <@USLACKBOT>", "<@UTEST>", "CHANNEL")
     handle(game, "choose scissors", "<@USLACKBOT>", "CHANNEL")
     _, response = handle(game, "choose rock", "<@UTEST>", "CHANNEL")
-    assert response == "Congratulations <@UTEST> on " \
-        "your impeccable skill!\nResults: \nRock - <@UTEST>\n" \
+    assert response == "<@UTEST> are a force to be reckoned with!" \
+        "\nResults: \nRock - <@UTEST>\n" \
         "Paper - \nScissors - <@USLACKBOT>"
 
 
@@ -187,8 +187,8 @@ def test_complete_game_one_paper(handle, game):
     handle(game, "challenge <@USLACKBOT>", "<@UTEST>", "CHANNEL")
     handle(game, "choose rock", "<@USLACKBOT>", "CHANNEL")
     _, response = handle(game, "choose paper", "<@UTEST>", "CHANNEL")
-    assert response == "Congratulations <@UTEST> on " \
-        "your impeccable skill!\nResults: \nRock - <@USLACKBOT>\n" \
+    assert response == "<@UTEST> are a force to be reckoned with!" \
+        "\nResults: \nRock - <@USLACKBOT>\n" \
         "Paper - <@UTEST>\nScissors - "
 
 
@@ -196,8 +196,8 @@ def test_complete_game_one_scissors(handle, game):
     handle(game, "challenge <@USLACKBOT>", "<@UTEST>", "CHANNEL")
     handle(game, "choose scissors", "<@USLACKBOT>", "CHANNEL")
     _, response = handle(game, "choose paper", "<@UTEST>", "CHANNEL")
-    assert response == "Congratulations <@USLACKBOT> on " \
-        "your impeccable skill!\nResults: \nRock - \n" \
+    assert response == "<@USLACKBOT> are a force to be reckoned " \
+        "with!\nResults: \nRock - \n" \
         "Paper - <@UTEST>\nScissors - <@USLACKBOT>"
 
 
@@ -206,8 +206,8 @@ def test_complete_game_multiple_rock(handle, game):
     handle(game, "choose rock", "<@USLACKBOT>", "CHANNEL")
     handle(game, "choose rock", "<@UOTHER>", "CHANNEL")
     _, response = handle(game, "choose scissors", "<@UTEST>", "CHANNEL")
-    assert response == "Congratulations <@USLACKBOT> <@UOTHER> on " \
-        "your impeccable skill!\nResults: \nRock - <@USLACKBOT> <@UOTHER>" \
+    assert response == "<@USLACKBOT> <@UOTHER> are a force to be " \
+        "reckoned with!\nResults: \nRock - <@USLACKBOT> <@UOTHER>" \
         "\nPaper - \nScissors - <@UTEST>"
 
 
@@ -216,8 +216,8 @@ def test_complete_game_multiple_paper(handle, game):
     handle(game, "choose rock", "<@USLACKBOT>", "CHANNEL")
     handle(game, "choose rock", "<@UOTHER>", "CHANNEL")
     _, response = handle(game, "choose paper", "<@UTEST>", "CHANNEL")
-    assert response == "Congratulations <@UTEST> on " \
-        "your impeccable skill!\nResults: \nRock - <@USLACKBOT> <@UOTHER>" \
+    assert response == "<@UTEST> are a force to be reckoned with!" \
+        "\nResults: \nRock - <@USLACKBOT> <@UOTHER>" \
         "\nPaper - <@UTEST>\nScissors - "
 
 
@@ -226,8 +226,8 @@ def test_complete_game_multiple_scissors(handle, game):
     handle(game, "choose scissors", "<@USLACKBOT>", "CHANNEL")
     handle(game, "choose scissors", "<@UOTHER>", "CHANNEL")
     _, response = handle(game, "choose paper", "<@UTEST>", "CHANNEL")
-    assert response == "Congratulations <@USLACKBOT> <@UOTHER> on " \
-        "your impeccable skill!\nResults: \nRock - " \
+    assert response == "<@USLACKBOT> <@UOTHER> are a force to be " \
+        "reckoned with!\nResults: \nRock - " \
         "\nPaper - <@UTEST>\nScissors - <@USLACKBOT> <@UOTHER>"
 
 
@@ -274,8 +274,8 @@ def test_start_over(handle, game):
     handle(game, "challenge <@USLACKBOT>", "<@UTEST>", "CHANNEL")
     handle(game, "choose scissors", "<@USLACKBOT>", "CHANNEL")
     _, response = handle(game, "choose rock", "<@UTEST>", "CHANNEL")
-    assert response == "Congratulations <@UTEST> on " \
-        "your impeccable skill!\nResults: \nRock - <@UTEST>\n" \
+    assert response == "<@UTEST> are a force to be reckoned with!" \
+                       "\nResults: \nRock - <@UTEST>\n" \
         "Paper - \nScissors - <@USLACKBOT>"
 
 
@@ -286,8 +286,8 @@ def test_play_again(handle, game):
     handle(game, "challenge <@USLACKBOT>", "<@UTEST>", "CHANNEL")
     handle(game, "choose scissors", "<@USLACKBOT>", "CHANNEL")
     _, response = handle(game, "choose rock", "<@UTEST>", "CHANNEL")
-    assert response == "Congratulations <@UTEST> on " \
-        "your impeccable skill!\nResults: \nRock - <@UTEST>\n" \
+    assert response == "<@UTEST> are a force to be reckoned with!\n" \
+        "Results: \nRock - <@UTEST>\n" \
         "Paper - \nScissors - <@USLACKBOT>"
 
 
