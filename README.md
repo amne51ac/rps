@@ -1,4 +1,5 @@
-#Welcome to Rock Paper Scissors on Slack!
+Welcome to Rock Paper Scissors on Slack!
+========================================
 
 >'Rock-paper-scissors (also known as paper, rock, scissors
 or paper, scissors, stone) is a hand game usually played
@@ -17,16 +18,19 @@ gameplay across geographically dislocated teams.  There
 is no limit to the number of players allowed, and there
 is no limite to the amount of fun to be had!
 
-##The commands are:
+_Commands:_
+-----------------
 
-###Challenge:
+Challenge:
+----------
 Starts a new game, challenging other Slack
 users by their handles, separated by spaces.
 
 __Usage:__
 - `@rps challenge @user @user...`
 
-###Choose:
+Choose:
+------
 Respond to a challenge by selecting your weapon of choice 
 (rock, paper or scissors). When the last player has chosen 
 then the winner(s) will be announced.  You can use your 
@@ -41,13 +45,15 @@ __Usage:__
 OR
 - `@rps choose scissors`
 
-###Help:
+Help:
+-----
 Display this help message.
 
 __Usage:__
 - `@rps help`
 
-###Quit:      
+Quit:
+-----      
 Quits any active game without prompting for
 permission or notifying the players.  Since
 this bot can only manage one game at a time
@@ -57,7 +63,8 @@ use wisely.
 __Usage:__
 - `@rps quit`
 
-###Status:
+Status:
+-------
 Returns a message describing whether or not
 there is a current game, and what players, if
 any, have yet to complete their turn.
@@ -65,6 +72,6 @@ any, have yet to complete their turn.
 __Usage:__
 - `@rps status`
 
-###The rps bot is brought to you by Mark Milhouse
+_**This rps bot is brought to you by amne51ac.**_
 
----rpsls coming soon---
+_rpsls coming soon_
