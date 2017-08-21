@@ -292,21 +292,23 @@ def test_play_again(handle, game):
 
 
 def test_add_no_users(handle, game):
+    _, response = handle(game, "challenge", "<@UTEST>", "CHANNEL")
+    assert response == rps.DEFAULT_RESPONSE
+
+
+def test_status_game_in_progress_waiting(handle, game):
     handle(game, "challenge <@USLACKBOT>", "<@UTEST>", "CHANNEL")
-    handle(game, "choose rock", "<@USLACKBOT>", "CHANNEL")
-    _, response = handle(game, "choose paper", "<@UTEST>", "CHANNEL")
-    assert response == "Congratulations <@UTEST> on " \
-        "your impeccable skill!\nResults: \nRock - <@USLACKBOT>\n" \
-        "Paper - <@UTEST>\nScissors - "
+    handle(game, "choose paper", "<@USLACKBOT>", "CHANNEL")
+    _, response = handle(game, "status", "<@UTEST>", "CHANNEL")
+    assert response == "There is currently a game in progress, " \
+        "waiting for : <@UTEST> "
 
 
-def test_status_game_in_progress(handle, game):
-    pass
-
-
-def test_status_no_game_in_progress(handle, game):
-    pass
+def test_status_no_game_in_progress_complete(handle, game):
+    _, response = handle(game, "status", "<@UTEST>", "CHANNEL")
+    assert response == "There is currently no game in progress."
 
 
 def test_help_request(handle, game):
-    pass
+    _, response = handle(game, "help", "<@UTEST>", "CHANNEL")
+    assert response == rps.HELP_TEXT
